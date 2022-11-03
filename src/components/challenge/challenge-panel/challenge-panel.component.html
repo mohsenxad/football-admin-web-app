@@ -1,0 +1,15 @@
+<p>challenge-panel works!</p>
+<ul>
+    <li
+        *ngFor = "let challenge of challengeList"
+    >
+        {{challenge.title}}
+        <ol>
+            <li
+                *ngFor="let option of challenge.optionList"
+            >
+                {{option.title}}
+            </li>
+        </ol>
+    </li>
+</ul>

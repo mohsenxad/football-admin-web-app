@@ -1,0 +1,16 @@
+<h2>
+    Event List
+</h2>
+<ul>
+    <li
+        *ngFor="let event of eventList"
+    >
+        {{event.title}}
+        
+        <a
+            href= "/challenge;eventId={{event._id}}"
+        >
+            Challenges
+        </a>
+    </li>
+</ul>
