@@ -10,7 +10,7 @@ import { ChallengeService } from 'src/services/challenge/challenge.service';
 })
 export class ChallengePanelComponent implements OnInit {
 
-
+	eventId : string = '';
 	challengeList: Challenge[] = [];
 
 	constructor(
@@ -39,8 +39,12 @@ export class ChallengePanelComponent implements OnInit {
     this.route.params
 			.subscribe(params => 
 				{
-					let eventId: string = params['eventId']; 
-          			this.getAllChallengeByEventId(eventId);
+					let eventId: string = params['eventId'];
+					if(eventId)
+						{
+							this.eventId = eventId;
+							this.getAllChallengeByEventId(eventId);
+						}
           
 				}
 			);

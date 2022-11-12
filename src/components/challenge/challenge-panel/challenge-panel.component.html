@@ -1,15 +1,13 @@
-<p>challenge-panel works!</p>
-<ul>
-    <li
-        *ngFor = "let challenge of challengeList"
-    >
-        {{challenge.title}}
-        <ol>
-            <li
-                *ngFor="let option of challenge.optionList"
-            >
-                {{option.title}}
-            </li>
-        </ol>
+<menu>
+    <li>
+        <a
+            href= "/challenge/add;eventId={{eventId}}"
+        >
+            Add Challenge
+        </a>
     </li>
-</ul>
+</menu>
+<challenge-list
+    [challengeList] = "challengeList"
+>
+</challenge-list>

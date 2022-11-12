@@ -1,0 +1,33 @@
+
+<dl>
+    <dt>
+        Id
+    </dt>
+    <dd>
+        {{challengeOption._id}}
+    </dd>
+
+    <dt>
+        Title
+    </dt>
+    <dd>
+        {{challengeOption.title}}
+    </dd>
+</dl>
+
+<menu>
+    <li>
+        <button>
+            Delete
+        </button>
+    </li>
+    <li
+        *ngIf = "challengeId"
+    >
+        <button
+            (click)="setAsResult()"
+        >
+            Set as Result
+        </button>
+    </li>
+</menu>

@@ -1,11 +1,15 @@
+import { ChallengeOption } from "./challengeOption";
+
 export interface Challenge
 {
-    _id: string,
-    title: string,
-    isActive: boolean,
-    registerDate: Date,
-    startDateTime: Date,
-    endDateTime: Date,
-    event:string,
-    optionList:any[]
+    _id?: string,
+    title?: string,
+    description?: string,
+    isActive?: boolean,
+    registerDate?: number,
+    startDateTime?: number,
+    endDateTime?: number,
+    event?:string,
+    optionList?:ChallengeOption[],
+    channelMessageId?:number
 }

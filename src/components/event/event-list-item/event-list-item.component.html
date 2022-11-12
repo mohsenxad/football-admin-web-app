@@ -1,0 +1,100 @@
+<dl>
+    <dt>
+        Id
+    </dt>
+    <dd>
+        {{event._id}}
+    </dd>
+
+    <dt>
+        Description
+    </dt>
+    <dd>
+        {{event.description}}
+    </dd>
+
+    <dt>
+        Title
+    </dt>
+    <dd>
+        {{event.title}}
+    </dd>
+
+    <dt>
+        Start Date Time
+    </dt>
+    <dd>
+        {{convertToLocalDateTime(event.startDateTime)}}
+    </dd>
+
+    <dt>
+        End Date Time
+    </dt>
+    <dd>
+        {{convertToLocalDateTime(event.endDateTime)}}
+    </dd>
+
+    <dt>
+        Is Active
+    </dt>
+    <dd>
+        {{event.isActive}}
+    </dd>
+
+    <dt>
+        Telegram Channel MessageId
+    </dt>
+    <dd>
+        <span
+            *ngIf = "event.channelMessageId"
+        >
+            {{event.channelMessageId}}
+        </span>
+
+        <i
+            *ngIf = "!event.channelMessageId"
+        >
+            Not Posted Yet!
+        </i>
+        
+    </dd>
+
+    
+</dl>
+
+<menu>
+    <li>
+        <a
+            href= "/challenge;eventId={{event._id}}"
+        >
+            Challenges
+        </a>
+    </li>
+    <li>
+        <a
+            href= "/event/edit;eventId={{event._id}}"
+        >
+            Edit
+        </a>
+    </li>
+    <li>
+        <button
+            (click) = "delete()"
+        >
+            Delete
+        </button>
+        
+    </li>
+    <li>
+        Activate / Deactivate
+    </li>
+    <li>
+        <button
+            (click) = "postOnChannel()"
+        >
+            Post On Telegram
+        </button>
+        
+    </li>
+</menu>
+

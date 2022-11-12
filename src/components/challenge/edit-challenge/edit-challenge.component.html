@@ -1,0 +1,106 @@
+<form>
+    <legend>
+        اضافه کردن چالش
+    </legend>
+
+    <ul>
+        <li>
+            <label
+                for = "txtTitle"
+            >
+                Title
+            </label>
+            <input
+                type="text"
+                id = "txtTitle"
+                name = "txtTitle"
+                [(ngModel)] = "challenge.title"
+            >
+        </li>
+
+        <li>
+            <label
+                for = "txtDescription"
+            >
+                Description
+            </label>
+            <textarea
+                name = "txtDescription" 
+                id = "txtDescription"
+                cols = "30"
+                rows = "10"
+                [(ngModel)] = "challenge.description"
+            ></textarea>
+        </li>
+
+        <li>
+            <label
+                for = "txtStartDateTime"
+            >
+                Start Date Time
+            </label>
+            <input
+                type = "datetime-local"
+                id = "txtStartDateTime"
+                name = "txtStartDateTime"
+                [(ngModel)] = "localStartDateTime"
+            >
+        </li>
+
+        <li>
+            <label
+                for = "txtEndDateTime"
+            >
+                End Date Time
+            </label>
+            <input
+                type = "datetime-local"
+                id = "txtEndDateTime"
+                name = "txtEndDateTime"
+                [(ngModel)] = "localEndDateTime"
+            >
+        </li>
+
+        <li>
+            <label
+                for = "txtIsActive"
+            >
+                Is Active
+            </label>
+            <input
+                type = "checkbox"
+                id = "IsActive"
+                name = "IsActive"
+                [(ngModel)] = "challenge.isActive"
+            >
+        </li>
+
+        <li>
+            <label
+                for = "txtOptionList"
+            >
+                Option List
+            </label>
+            <i>
+                by updating challenge option id will change!
+            </i>
+            <input
+                disabled
+                type = "text"
+                id = "txtOptionList"
+                name = "txtOptionList"
+                [(ngModel)] = "optionListString"
+            >
+        </li>
+    </ul>
+
+    <menu>
+        <li>
+            <button
+                (click) = "updateChallenge()"
+            >
+                ثبت
+            </button>
+        </li>
+    </menu>
+</form>

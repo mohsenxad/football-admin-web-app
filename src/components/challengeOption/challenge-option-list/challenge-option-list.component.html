@@ -1,0 +1,10 @@
+<ul>
+    <li
+        *ngFor="let challengeOption of challengeOptionList"
+    >
+        <challenge-option-list-item
+            [challengeId] = "challengeId"
+            [challengeOption] = "challengeOption"
+        ></challenge-option-list-item>
+    </li>
+</ul>

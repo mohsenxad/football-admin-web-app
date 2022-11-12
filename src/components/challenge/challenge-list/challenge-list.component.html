@@ -1,0 +1,9 @@
+<ul>
+    <li
+        *ngFor = "let challenge of challengeList"
+    >
+        <challenge-list-item
+            [challenge] = "challenge"
+        ></challenge-list-item>
+    </li>
+</ul>
