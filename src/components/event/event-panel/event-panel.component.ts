@@ -22,6 +22,7 @@ export class EventPanelComponent implements OnInit {
       console.log(this.eventList);
     })
   }
+  
   ngOnInit(): void {
     this.getAllEvents();
   }

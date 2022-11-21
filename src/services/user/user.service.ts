@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  constructor() { }
+  constructor(
+		private httpClient: HttpClient
+	) { }
+
+	getAll():any
+		{
+			return this.httpClient.get('http://localhost:6003/user/getAll');
+		}
 }

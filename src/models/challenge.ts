@@ -11,5 +11,7 @@ export interface Challenge
     endDateTime?: number,
     event?:string,
     optionList?:ChallengeOption[],
-    channelMessageId?:number
+    channelMessageId?:number,
+    cost?:number,
+    revenue?:number
 }

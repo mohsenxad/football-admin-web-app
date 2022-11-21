@@ -35,6 +35,34 @@
 
         <li>
             <label
+                for = "txtCost"
+            >
+                Cost
+            </label>
+            <input
+                type="number"
+                id = "txtCost"
+                name = "txtCost"
+                [(ngModel)] = "challenge.cost"
+            >
+        </li>
+
+        <li>
+            <label
+                for = "txtRevenue"
+            >
+                Revenue
+            </label>
+            <input
+                type="number"
+                id = "txtRevenue"
+                name = "txtRevenue"
+                [(ngModel)] = "challenge.revenue"
+            >
+        </li>
+
+        <li>
+            <label
                 for = "txtStartDateTime"
             >
                 Start Date Time

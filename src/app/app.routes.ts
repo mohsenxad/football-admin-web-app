@@ -5,6 +5,7 @@ import { EditChallengeComponent } from 'src/components/challenge/edit-challenge/
 import { AddEventComponent } from 'src/components/event/add-event/add-event.component';
 import { EditEventComponent } from 'src/components/event/edit-event/edit-event.component';
 import { EventPanelComponent } from 'src/components/event/event-panel/event-panel.component';
+import { UserPanelComponent } from 'src/components/user/user-panel/user-panel.component';
 export const routes: Routes = [
     {path:'event', component: EventPanelComponent},
     {path:'event/add', component: AddEventComponent},
@@ -12,4 +13,5 @@ export const routes: Routes = [
     {path:'challenge', component: ChallengePanelComponent, data:{eventId:undefined}},
     {path:'challenge/add', component: AddChallengeComponent, data:{eventId:undefined}},
     {path:'challenge/edit', component: EditChallengeComponent, data:{eventId:undefined, challengeId:undefined}},
+    {path:'user', component: UserPanelComponent},
 ]
